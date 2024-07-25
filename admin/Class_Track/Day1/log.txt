@@ -4,3 +4,277 @@ Made several pull and push between the local and remote repos.
 
 
 
+Terminal :
+
+PS D:\221_Saeed_Ahmed\Class_Repo> git clone https://github.com/theesaeedahmed/DevOps.git
+Cloning into 'DevOps'...
+warning: You appear to have cloned an empty repository.
+PS D:\221_Saeed_Ahmed\Class_Repo> gi
+                                  git status
+fatal: not a git repository (or any of the parent directories): .git
+PS D:\221_Saeed_Ahmed\Class_Repo> cd .\DevOps\
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> code README.md
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git commit -m "added readme file. first commit."
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git add .
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git commit -m "added readme file. first commit."
+[main (root-commit) 4aff18e] added readme file. first commit.
+ 1 file changed, 7 insertions(+)
+ create mode 100644 README.md
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git log
+commit 4aff18eb63e2831e394a4c104db7900ddcaaf582 (HEAD -> main)
+Author: theesaeedahmed <me.coderr@gmail.com>
+Date:   Thu Jul 25 10:41:56 2024 +0530
+
+    added readme file. first commit.
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> 
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps>
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps>
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git push
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/theesaeedahmed/DevOps.git
+ * [new branch]      main -> main
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> ls
+
+
+    Directory: D:\221_Saeed_Ahmed\Class_Repo\DevOps
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        25-07-2024     10:41            101 README.md      
+
+
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git remote -v
+origin  https://github.com/theesaeedahmed/DevOps.git (fetch)
+origin  https://github.com/theesaeedahmed/DevOps.git (push)      
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)     
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git add .
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git commit -m "updated readme syntax"
+[main 3a274b6] updated readme syntax
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.     
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)    
+To https://github.com/theesaeedahmed/DevOps.git
+   4aff18e..3a274b6  main -> main
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)     
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git add .               
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git commit -m "updated readme syntax"
+[main b950278] updated readme syntax
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git push                
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.     
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)    
+To https://github.com/theesaeedahmed/DevOps.git
+   3a274b6..b950278  main -> main
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0     
+Unpacking objects: 100% (3/3), 20.93 KiB | 739.00 KiB/s, done.
+From https://github.com/theesaeedahmed/DevOps
+   b950278..38728d6  main       -> origin/main
+Updating b950278..38728d6
+Fast-forward
+ 221_Saeed_Ahmed.jfif | Bin 0 -> 20654 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 221_Saeed_Ahmed.jfif
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)  
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    221_Saeed_Ahmed.jfif
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed) 
+        admin/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git add .
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git commit -m "added my image"
+[main 5b1f307] added my image
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename 221_Saeed_Ahmed.jfif => admin/me.jfif (100%)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.     
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)    
+To https://github.com/theesaeedahmed/DevOps.git
+   38728d6..5b1f307  main -> main
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> code ./admin/intro.txt
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed) 
+        admin/intro.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git commit -m "added an intro markdown"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed) 
+        admin/intro.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git add .
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git commit -m "added an intro markdown"
+[main 742e5b9] added an intro markdown
+ 1 file changed, 7 insertions(+)
+ create mode 100644 admin/intro.md
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git log
+commit 742e5b9d0e0b62420b775ec471e11efc7f306f7b (HEAD -> main)
+Author: theesaeedahmed <me.coderr@gmail.com>
+Date:   Thu Jul 25 11:09:19 2024 +0530
+
+    added an intro markdown
+
+commit 5b1f30777df4f72f2d08db66c910c5a2795aeb1a (origin/main)    
+Author: theesaeedahmed <me.coderr@gmail.com>
+Date:   Thu Jul 25 11:00:14 2024 +0530
+
+    added my image
+
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 530 bytes | 530.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/theesaeedahmed/DevOps.git
+   5b1f307..742e5b9  main -> main
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git pull
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 12 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), 3.47 KiB | 154.00 KiB/s, done.
+From https://github.com/theesaeedahmed/DevOps
+   742e5b9..518f0b4  main       -> origin/main
+Updating 742e5b9..518f0b4
+Fast-forward
+ admin/intro.md | 27 +++++++++++++++++++++++----
+ 1 file changed, 23 insertions(+), 4 deletions(-)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> code Class_Track/Day1
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> code ./admin/Class_Track/Day1/log.txt
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        admin/Class_Track/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git add .
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git commit -m "added class track"
+[main 58ff4ae] added class track
+ 4 files changed, 6 insertions(+)
+ create mode 100644 admin/Class_Track/Day1/image1.png
+ create mode 100644 admin/Class_Track/Day1/image2.png
+ create mode 100644 admin/Class_Track/Day1/image3.png
+ create mode 100644 admin/Class_Track/Day1/log.txt
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps> git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 162.58 KiB | 27.10 MiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/theesaeedahmed/DevOps.git
+   518f0b4..58ff4ae  main -> main
+PS D:\221_Saeed_Ahmed\Class_Repo\DevOps>
