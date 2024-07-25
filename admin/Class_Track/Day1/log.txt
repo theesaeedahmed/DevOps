@@ -1,0 +1,6 @@
+Created the DevOps remote repo.
+
+Made several pull and push between the local and remote repos.
+
+
+
