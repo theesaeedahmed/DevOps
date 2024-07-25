@@ -1,7 +1,6 @@
 # DevOps Class
 
 ## Day 1
-
-- Installed VSCode.
 - Installed Git.
-- Created remote public repo: DevOps
+- Installed VSCode.
+- Created remote public repo: DevOps.
